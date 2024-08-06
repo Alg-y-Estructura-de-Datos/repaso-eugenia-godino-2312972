@@ -1,9 +1,20 @@
 #include <iostream>
 using namespace std;
 
-int main() {
+int factorial (int n){
+    int fact;
+    if (n < 1){
+        fact = 1;
+    } else {
+        fact = n * factorial (n-1);
+    }
+    return fact;
+}
 
-    cout << "Examen Final Prog 3" << endl;
-
-    return 0;
+int main (){
+    int a;
+    cout << "ingrese un numero: ";
+    cin>>a;
+    cout << a<<"! = "<<factorial(a)<<endl;
+    return 0;                                                                                                                   
 }
